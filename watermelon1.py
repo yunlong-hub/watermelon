@@ -140,7 +140,7 @@ def main():
     train_x, train_y, test_x, test_y = preprocess()
     #训练
     dim = 10
-    w1,w2,b1,b2= standard_BP(x,y,dim)
+    w1,w2,b1,b2= standard_BP(train_x, train_y,dim)
     #w1,w2,b1,b2 = accumulate_BP(train_x, train_y,dim)
     #测试
     in1 = np.dot(test_x,w1)+b1
