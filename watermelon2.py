@@ -36,10 +36,10 @@ def d_sigmoid(x):
 ##累积BP算法
 def accumulate_BP(x,y,dim=10,eta=0.1,max_iter=500):
     n_samples = x.shape[0]
-    w1 = np.zeros((x.shape[1],dim))
-    b1 = np.zeros((n_samples,dim))
-    w2 = np.zeros((dim,1))
-    b2 = np.zeros((n_samples,1))
+    w1 = 10 * np.random.random((x.shape[1],dim)) - 5
+    b1 = 10 * np.random.random((n_samples,dim)) - 5
+    w2 = 10 * np.random.random((dim,1)) - 5
+    b2 = 10 * np.random.random((n_samples,1)) -5
     losslist = []
     for ite in range(max_iter):
         ##前向传播
@@ -77,10 +77,10 @@ def accumulate_BP(x,y,dim=10,eta=0.1,max_iter=500):
 ##标准BP算法
 def standard_BP(x,y,dim=10,eta=0.1,max_iter=500):
     n_samples = 1
-    w1 = np.zeros((x.shape[1],dim))
-    b1 = np.zeros((n_samples,dim))
-    w2 = np.zeros((dim,1))
-    b2 = np.zeros((n_samples,1))
+    w1 = 10 * np.random.random((x.shape[1],dim)) - 5
+    b1 = 10 * np.random.random((n_samples,dim)) - 5
+    w2 = 10 * np.random.random((dim,1)) - 5
+    b2 = 10 * np.random.random((n_samples,1)) -5
     losslist = []
     for ite in range(max_iter):
         loss_per_ite = []
