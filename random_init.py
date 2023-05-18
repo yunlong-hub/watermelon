@@ -126,8 +126,8 @@ def main():
     print(data)
     x,y = preprocess(data)
     dim = 10
-    w1,w2,b1,b2= standard_BP(x,y,dim)
-    #w1,w2,b1,b2 = accumulate_BP(x,y,dim)
+    #w1,w2,b1,b2= standard_BP(x,y,dim)
+    w1,w2,b1,b2 = accumulate_BP(x,y,dim)
     #测试
     in1 = np.dot(x,w1)+b1
     out1 = sigmoid(in1)
